@@ -1,0 +1,39 @@
+/*Criando variaveis em CSS*/
+:root {
+    /* É necessário adicinar "--" no começo delas para criar uma variavel */
+    --bg-button: #f0f0f0;
+    --border-button: solid 1px #888;
+}
+
+.button {
+    font-size: 1.4em;
+    /* Usando var() para referenciar a variavel criada por mim logo a cima */
+    background-color: var(--bg-button);
+    border: none;
+    border-right: var(--border-button);
+    border-bottom: var(--border-button);
+    outline: none;
+}
+
+.button:active {
+    background-color: #ccc;
+}
+
+/* Criando classe para fazer o botão ocupar duas colunas */
+.button.double {
+    grid-column: span 2;
+}
+
+/* Criando classe para fazer o botão ocupar três colunas */
+.button.triple {
+    grid-column: span 3;
+}
+
+.button.operation {
+    background-color: #fa8231;
+    color: #fff
+}
+
+.button.operation:active {
+    background-color: #fa8231cc;
+}
